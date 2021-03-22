@@ -3,6 +3,7 @@ package com.example.simpleparadox.listycity;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * This is a class that keeps track of a list of city objects
@@ -70,7 +71,12 @@ public class CityList {
     }
 
     public void delete() {
+        if (countCities() == 0) {
+            throw new IllegalArgumentException("List must be non-empty");
+        }
 
+        int randInt = (int)(Math.random() * (countCities() - 1));
+        cities.remove(randInt);
     }
 
     /**
