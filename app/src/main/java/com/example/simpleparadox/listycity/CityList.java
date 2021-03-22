@@ -71,12 +71,12 @@ public class CityList {
     }
 
     public void delete() {
-        /*if (countCities() == 0) {
+        if (countCities() == 0) {
             throw new IllegalArgumentException("List must be non-empty");
         }
 
         int randInt = (int)(Math.random() * (countCities() - 1));
-        cities.remove(randInt);*/
+        cities.remove(randInt);
     }
 
     /**
