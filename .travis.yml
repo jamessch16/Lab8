@@ -20,10 +20,11 @@ android:
       - 'google-gdk-license-.+'
 
 before_install:
+- yes | sdkmanager "platforms;android-29"
 
 before_script:
   - chmod +x gradlew
 
-#script:
-#  - ./gradlew clean build
-#  - ./gradlew test
+script:
+  - ./gradlew clean build
+  - ./gradlew test
